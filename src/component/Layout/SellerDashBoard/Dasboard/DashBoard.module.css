@@ -1,0 +1,18 @@
+header{
+    display: flex;
+}
+.DashBoard{
+    background-color: #1E1021;
+    height: 87.5vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.DashBoard>a{
+    padding-top: 32px;
+    padding-left: 15px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

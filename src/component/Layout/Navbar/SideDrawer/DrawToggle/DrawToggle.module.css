@@ -1,0 +1,10 @@
+.DrawToggle{
+    display: flex;
+    flex-flow: column;
+}
+.DrawToggle div{
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 3px 0;
+}

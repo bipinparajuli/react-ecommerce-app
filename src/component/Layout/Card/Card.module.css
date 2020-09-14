@@ -1,0 +1,17 @@
+.Card{
+    display: flex;
+    flex-flow: column;
+}
+.row{
+    display: flex;
+    flex-flow: column;
+}
+.container{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+}
+.container::-webkit-scrollbar{
+    display: none;
+}

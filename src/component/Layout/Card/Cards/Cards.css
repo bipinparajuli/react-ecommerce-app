@@ -1,0 +1,30 @@
+.card{
+    margin-left: 15px;
+    color: black;
+    width: 270px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 2px 1px rgba(255,255,255, 0.1);
+ background:rgba(255,255,255, 0.9);
+ transition: all 2s ease;
+}
+.card img{
+    object-fit: contain;
+    min-height: 150px;
+    min-width: 250px;
+    transition: transform 450ms;
+}
+.card img:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    
+}
+.ImageContainer{
+    overflow: hidden;
+}

@@ -1,0 +1,21 @@
+.Heading{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Heading h1 {
+    margin: 8% 0;
+    font-weight: bold;
+}
+.image{
+    display: flex;
+    margin:5%;
+    justify-content: space-around;
+}
+.Form{
+background-color: rgba(0, 0, 0, 0.5);
+}
