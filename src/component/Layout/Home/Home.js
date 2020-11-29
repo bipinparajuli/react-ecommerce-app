@@ -4,9 +4,10 @@ import {useStateValue} from '../../../container/StateProvider'
 import HomeUi from './HomeUi/HomeUi'
 import Card from '../Card/Card'
 
+
+
 function Home() {
     const [{Others}]=useStateValue();
-    console.log(Others)
 
     return (
         <>

@@ -13,7 +13,8 @@ function Card () {
     const [Furniture,setFurniture]=useState()
 
  
-    useEffect(() => {
+    useEffect( () => {
+
  const obj=['Electronic.json',"Hardware.json",'Assories.json','Furniture.json','Grossery.json',"Others.json"]
  
  for(let i in obj){
@@ -28,7 +29,7 @@ else{
     const sum=Object.keys(response.data).map(igkey=>{
         return response.data[igkey]
     })
-setstate(sum)
+    setstate(sum)
 
 }
            
@@ -171,17 +172,17 @@ setOthers(sum)
                                         return (
 
                         
-                                <div>
-                                    {i == 0?<h3 style={{color:'white',margin:'20px 10px'}}>{item.select}</h3>:null}
+                                <div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}>
+                                    {i == 0?<h3 style={{color:'white',margin:'20px 10px',display:'block'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}
                                        <Cards
-                                                                name={item.name}
-                                                                price={item.price}
-                                                                description={item.textarea}
-                                                                imageUrl={item.imageUrl}
-                                                                title={item.select}
-                                                                phone={item.number}
-                                                                address={item.address}
-                                                                quality={item.quality}
+                                                        name={item.name}
+                                                        description={item.description}
+                                                       price={item.price} 
+                                                       imageUrl={item.imageUrl}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
+                                                        quality={item.quality}
                                             />
                                                 </div>
                                         )
@@ -195,16 +196,16 @@ setOthers(sum)
 {
                        
                         Hardware?.map((item,i)=>{
-                            return(<div>
-{i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.select}</h3>:null}
+                            return(<div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}>
+{i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}
                                 <Cards
                                                         name={item.name}
-                                                       price={item.price}
+                                                        description={item.description}
+                                                       price={item.price} 
                                                        imageUrl={item.imageUrl}
-                                                       description={item.textarea}
-                                                        title={item.select}
-                                                        phone={item.number}
-                                                        address={item.address}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
                                                         quality={item.quality}
                                                         />
                                     </div>
@@ -219,16 +220,16 @@ setOthers(sum)
 {
                        
                         Furniture?.map((item,i)=>{
-                            return(<div>
-                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.select}</h3>:null}            
+                            return(<div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}>
+                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}            
                                 <Cards
                                                         name={item.name}
-                                                       price={item.price}
+                                                        description={item.description}
+                                                       price={item.price} 
                                                        imageUrl={item.imageUrl}
-                                                        title={item.select}
-                                                        description={item.textarea}
-                                                        phone={item.number}
-                                                        address={item.address}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
                                                         quality={item.quality}
                                                         />
                                     </div>
@@ -244,16 +245,16 @@ setOthers(sum)
 {
                        
                         Assories?.map((item,i)=>{
-                            return(<div>
-                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.select}</h3>:null}           
+                            return(<div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}>
+                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}           
                                 <Cards
                                                         name={item.name}
-                                                       price={item.price}
-                                                       description={item.textarea}
+                                                        description={item.description}
+                                                       price={item.price} 
                                                        imageUrl={item.imageUrl}
-                                                        title={item.select}
-                                                        phone={item.number}
-                                                        address={item.address}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
                                                         quality={item.quality}
                                                         />
                                     </div>
@@ -271,17 +272,17 @@ setOthers(sum)
 {
                        
                         Grossery?.map((item,i)=>{
-                            return(<div>
-                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.select}</h3>:null}            
+                            return(<div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}>
+                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}            
                                 <Cards
                                                         name={item.name}
-                                                       price={item.price}
-                                                       description={item.textarea}
+                                                        description={item.description}
+                                                       price={item.price} 
                                                        imageUrl={item.imageUrl}
-                                                       title={item.select}
-                                                       phone={item.number}
-                                                       address={item.address}
-                                                       quality={item.quality}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
+                                                        quality={item.quality}
                                                        />
                                     </div>
                             )
@@ -296,16 +297,18 @@ setOthers(sum)
 {
                        
                         Others?.map((item,i)=>{
-                            return(<div>
-                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.select}</h3>:null}           
+              
+                            console.log( item)    
+              return(<div style={{display:'flex',flexDirection:'column',justifyContent:'space-around'}}> 
+                    {i == 0?<h3 style={{color:'white',margin:'10px 15px'}}>{item.type}</h3>:<div style={{marginTop:'19%'}}></div>}           
                                 <Cards
                                                         name={item.name}
-                                                        description={item.textarea}
+                                                        description={item.description}
                                                        price={item.price} 
                                                        imageUrl={item.imageUrl}
-                                                        title={item.select}
-                                                        phone={item.number}
-                                                        address={item.address}
+                                                        title={item.type}
+                                                        phone={item.phone}
+                                                        address={item.location}
                                                         quality={item.quality}
                                                         />
                                     </div>

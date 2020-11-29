@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import classes from './HomeUi.module.css'
 import Image from '../../../../../src/Assets/lco.png'
 import Form from '../../Login/Form/From'
 
 
 function HomeUi() {
+const [state, setstate] = useState()
+
+
     return (
         <>
         <div className={classes.Heading}>
@@ -15,7 +18,7 @@ function HomeUi() {
             <div className={classes.image}>
                 <img src={Image} alt="none" />
                 <div className={classes.Form}>
-                <Form  />
+                
                 
                 </div>
                 

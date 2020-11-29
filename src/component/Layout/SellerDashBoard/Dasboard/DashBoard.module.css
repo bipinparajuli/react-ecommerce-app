@@ -1,9 +1,10 @@
 header{
     display: flex;
+width: 250px;
 }
 .DashBoard{
     background-color: #1E1021;
-    height: 87.5vh;
+    height: 100vh;
     width: 300px;
     display: flex;
     flex-direction: column;

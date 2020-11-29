@@ -1,5 +1,6 @@
 .navbar{
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: space-around;
     background:linear-gradient(to right,#BF1AAF,#350389);
@@ -13,6 +14,9 @@
 }
 .DrawToggle{
     display: none;
+}
+.DesktopOnly{
+    display: flex;
 }
 @media(max-width:500px){
     .navbar{

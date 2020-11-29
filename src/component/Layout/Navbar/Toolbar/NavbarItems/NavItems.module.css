@@ -2,8 +2,11 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2vw;
     padding: 0 10px;
+}
+.NavbarItems{
+    display: flex;
 }
 @media(max-width:500px)
 {
@@ -11,6 +14,11 @@
         display: flex;
         flex-flow: column;
         font-size: 20px;
-        color:yellowgreen;
+        color:black;
     }
+    
+.NavbarItems{
+    display: flex;
+flex-direction: column;
+}
 }

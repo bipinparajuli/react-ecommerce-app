@@ -5,7 +5,8 @@ export const initailState={
     Furniture:[],
     Others:[],
 login:[],
-backdrop:[]
+backdrop:[],
+addtocart:[]
 }
 
 
@@ -44,6 +45,10 @@ switch(action.type){
 
         case 'LOG_IN':
         return {...state,login:action.item}
+
+        case 'ADD_TO_CART':
+            return {...state,addtocart:action.item}
+    
 
         case "BACK_DROP_CARD_DETAIL" :
             return {...state,backdrop:action.item}

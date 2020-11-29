@@ -2,17 +2,16 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import classes from './DashBoard.module.css'
 import Sell from '../Sell/Sell'
-function DashBoard() {
+import {useStateValue} from '../../../../container/StateProvider'
+function DashBoard(props) {
+    const [{login}]=useStateValue()
     return (
         <>
-        <header>
+        
         <div className={classes.DashBoard}>
-            <h1></h1>
-            <Link >DashBoard</Link>
-            <Link to="./sell/user">Sell</Link>
+            <Link to='./sellerdashboardhome' >DashBoard</Link>
+            <Link to={login.uid}>Sell</Link>
         </div>
-        <Sell />
-        </header>
         </>
     )
 }

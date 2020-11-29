@@ -17,7 +17,7 @@ function Navbar(props) {
        
       <input className="form-control mr-2" type="search" style={{width:'300px',height:'30px'}} placeholder="Search" aria-label="Search" />
       <div className={classes.DesktopOnly}>
-      <NavbarItems />
+      <NavbarItems props={props} />
       </div>
      <Link to="./checkout"><FaShoppingCart  style={{color:'white'}}/> </Link> 
 

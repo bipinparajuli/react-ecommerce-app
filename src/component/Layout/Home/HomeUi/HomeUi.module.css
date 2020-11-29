@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    width: 100hw;
 }
 
 .Heading h1 {
@@ -17,5 +18,5 @@
     justify-content: space-around;
 }
 .Form{
-background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(128, 84, 84, 0.5);
 }

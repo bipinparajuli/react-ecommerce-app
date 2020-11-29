@@ -6,6 +6,7 @@ function DrawToggle(props) {
         <div className={classes.DrawToggle} onClick={props.click} >
             <div></div>
             <div></div>
+            
             <div></div>
         </div>
     )

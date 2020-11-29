@@ -6,9 +6,11 @@ import {useStateValue} from '../../container/StateProvider'
 
 function Layout(props) {
     const[{},dispatch] = useStateValue()
-    const[state,setstate]= useState(true)
+    const[state,setstate]= useState(false)
     const BackDropCloseHandler=()=>{
+        console.log('i am clicked')
     setstate((prevstate)=>{
+        console.log('i am prevstate',prevstate)
  return !prevstate
     })
     dispatch({
@@ -23,7 +25,8 @@ function Layout(props) {
     return (
         <>
            <Navbar click={BackDropCloseHandler} />
-           {/* <SideDrawer click={BackDropCloseHandler} open={state} /> */}
+           <SideDrawer click={BackDropCloseHandler} open={console.log(state),state} />
+
     <main className={classes.content}>{props.children}</main>
         </>
     )
