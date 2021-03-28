@@ -13,19 +13,18 @@ function Cards(props) {
 const [{login,backdrop},dispatch]=useStateValue();
 // console.log('UUID' + uuid())
 
-const showCardDetail=async (props)=>{
-    console.log(props)
+const showCardDetail=async ({name,price,description,phone,address,quality,location})=>{
 await dispatch({
     type:'BACK_DROP_CARD_DETAIL',
     item:{
         state:true,
-        name:props.name,
-        price:props.price,
-        description:props.description,
-        phone:props.phone,
-        address:props.address,
-        quality:props.quality,
-        location:props.location
+        name:name,
+        price:price,
+        description:description,
+        phone:phone,
+        address:address,
+        quality:quality,
+        location:location
     }
 })
 setState(true)
