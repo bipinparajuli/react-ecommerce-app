@@ -13,7 +13,7 @@ function Cards(props) {
 const [{login,backdrop},dispatch]=useStateValue();
 // console.log('UUID' + uuid())
 
-const showCardDetail=async ({name,price,description,phone,address,quality,location})=>{
+const showCardDetail=async (props,{name,price,description,phone,address,quality,location})=>{
 await dispatch({
     type:'BACK_DROP_CARD_DETAIL',
     item:{
@@ -32,7 +32,6 @@ setState(true)
 }
 
 const modalCloseHandler=()=>{
-    console.log(' iam in backdrop c')
     dispatch({
         type:'BACK_DROP_CARD_DETAIL',
         item:{
@@ -45,7 +44,6 @@ const modalCloseHandler=()=>{
 const addToBasket=()=>{
 
     const name=login.email.split('@')
-    console.log(name)
 const uid=uuid();
     axios.post(`${name[0]}/${uid}.json`,{...props,uid} )
 
@@ -81,8 +79,8 @@ const uid=uuid();
                 <img src={props.imageUrl} className='card-img-top' alt="..." />
                 </div>
                 <div className="card-body" >
-                    <h5 className="card-title" >{props.name}</h5>
-                    <p className="card-text"  >{props.price}</p>
+                    <h5 className="card-title" >{name}</h5>
+                    <p className="card-text"  >{price}</p>
                     <p><strong style={{color:"blueviolet",cursor:'pointer'}}   onClick={()=>showCardDetail(props)}>Show card detail</strong></p>
                     <button href="#"  disabled={!login.state} class="btn btn-primary" onClick={addToBasket} >Add to Card</button>
                 </div>
