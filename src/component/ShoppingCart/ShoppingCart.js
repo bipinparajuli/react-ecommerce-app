@@ -1,12 +1,12 @@
 import React from 'react'
 
-function ShoppingCart(props) {
+function ShoppingCart({image,name,price}) {
     return (
         <div>
             <h1>i am inside of shopping basket</h1>
-            <img src={props.image} alt="none" />
-    <h2>{props.name}</h2>
-    <p>{props.price}</p>
+            <img src={image} alt="none" />
+    <h2>{name}</h2>
+    <p>{price}</p>
         </div>
     )
 }
